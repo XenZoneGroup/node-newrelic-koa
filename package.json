@@ -13,7 +13,7 @@
     "versioned": "versioned-tests --minor -i 2 'tests/versioned/*.tap.js'",
     "lint": "eslint *.js lib tests",
     "lint:fix": "yarn lint --fix",
-    "push": "yarn build && cp package.json dist/ && node scripts/prepublish && npm publish dist"
+    "push": "npm publish"
   },
   "author": "New Relic Node.js agent team <nodejs@newrelic.com>",
   "license": "UNLICENSED",
