@@ -1,6 +1,6 @@
 {
-  "name": "@newrelic/koa",
-  "version": "1.0.6",
+  "name": "@mindsforlife/node-newrelic-koa",
+  "version": "0.1.0",
   "description": "Koa instrumentation for the New Relic Node agent",
   "main": "index.js",
   "directories": {
@@ -11,10 +11,12 @@
     "test": "npm run unit && npm run versioned",
     "unit": "tap tests/unit/**/*.tap.js",
     "versioned": "versioned-tests --minor -i 2 'tests/versioned/*.tap.js'",
-    "lint": "eslint *.js lib tests"
+    "lint": "eslint *.js lib tests",
+    "lint:fix": "yarn lint --fix",
+    "push": "yarn build && cp package.json dist/ && node scripts/prepublish && npm publish dist"
   },
   "author": "New Relic Node.js agent team <nodejs@newrelic.com>",
-  "license": "LicenseRef-LICENSE",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@newrelic/test-utilities": "^1.2.0",
     "coveralls": "^3.0.0",

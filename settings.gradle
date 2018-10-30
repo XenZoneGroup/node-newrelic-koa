@@ -1,0 +1,13 @@
+pluginManagement {
+  repositories {
+    maven {
+      url 'https://packages.rootcapital.tech/repository/rootcapital-gradle-aggregate/'
+      credentials {
+        username System.getenv('rc_library_username') ?: rcLibraryUsername
+        password System.getenv('rc_library_password') ?: rcLibraryPassword
+      }
+    }
+  }
+}
+
+rootProject.name = 'node-newrelic-koa'
